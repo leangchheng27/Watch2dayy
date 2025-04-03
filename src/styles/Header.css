@@ -1,0 +1,242 @@
+/* navifation bar */
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10px;;
+}
+
+.navLeft .navRight {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    cursor: pointer;
+    margin-right: 100px;
+}
+
+.navLeft {
+    padding-left: 40px;
+}
+
+.navLeft li {
+    display: inline-block;
+    padding: 0px 20px;
+    position: relative;
+}
+
+.navLeft li a {
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
+
+.navLeft li a:hover {
+    color: red;
+}
+
+.navRight {
+    padding-right: 40px;
+}
+
+.navRight li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.navRight li a {
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
+
+
+.navRight li a:hover {
+    color: red;
+}
+
+.searchIcon {
+    width: 24px; 
+    height: 24px;
+    transition: filter 0.3s ease; 
+}
+
+.notiIcon {
+    width: 24px; 
+    height: 24px;
+    transition: filter 0.3s ease; 
+}
+
+
+/* Dropdown styles */
+.dropdown {
+    list-style: none;
+    position: absolute;
+    top: 100%; /* Positioned below the parent */
+    left: -20px;
+    background-color: gray;
+    padding: 0;
+    margin: 0;
+    display: none; /* Initially hidden */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    width: 140px;
+
+}
+
+.dropdown li {
+    font-weight: bold;
+    padding: 5px 10px;
+    width: 160px;
+    }
+
+.dropdown a {
+    color: #333; /* Changed to visible text color */
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+.dropdown a:hover {
+    opacity: 0.7;
+}
+
+/* Show dropdown on hover */
+.navLeft li:hover > .dropdown {
+    display: block;
+}
+
+/* Nested dropdown styles */
+.dropdown ul {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 20;
+    width: 180px;
+}
+
+.dropdown li:hover > ul {
+    display: block;
+}
+
+/* Additional menu effects */
+.choose {
+    display: flex;
+    flex-direction: row;
+    color: rgb(25, 25, 94);
+    margin-left: 200px;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.choose a {
+    color: #11284c;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    padding-right: 2em;
+}
+
+.choose a:hover {
+    opacity: 0.5;
+}
+  
+.navRight ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding: 10px;
+}
+
+.logout-button {
+    padding: 8px 16px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #e60000;
+}
+
+/* Search Icon */
+.searchIcon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.searchIcon:hover {
+    transform: scale(1.1);
+}
+
+/* Search Container */
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-input {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    width: 200px;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #ff4d4d;
+}
+
+.search-button {
+    padding: 8px 16px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #e60000;
+}
+
+/* Close Search Button */
+.close-search {
+    padding: 8px;
+    background-color: transparent;
+    color: #ff4d4d;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-search:hover {
+    color: #e60000;
+}

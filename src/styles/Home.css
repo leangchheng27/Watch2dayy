@@ -1,0 +1,620 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* NAVIGATION BAR */
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10px;
+    z-index: 10;
+    position: relative;
+}
+
+.navLeft .navRight {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    cursor: pointer;
+    margin-right: 100px;
+}
+
+.navLeft {
+    padding-left: 40px;
+}
+
+.navLeft li {
+    display: inline-block;
+    padding: 0px 20px;
+    position: relative;
+}
+
+.navLeft li a {
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
+
+.navLeft li a:hover {
+    color: red;
+}
+
+.navRight {
+    padding-right: 40px;
+}
+
+.navRight li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.navRight li a {
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
+
+
+.navRight li a:hover {
+    color: red;
+}
+
+.searchIcon {
+    width: 24px; 
+    height: 24px;
+    transition: filter 0.3s ease; 
+}
+
+.notiIcon {
+    width: 24px; 
+    height: 24px;
+    transition: filter 0.3s ease; 
+}
+
+
+/* Dropdown styles */
+.dropdown {
+    list-style: none;
+    position: absolute;
+    top: 100%; /* Positioned below the parent */
+    left: -20px;
+    background-color: gray;
+    padding: 0;
+    margin: 0;
+    display: none; /* Initially hidden */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    width: 140px;
+
+}
+
+.dropdown li {
+    font-weight: bold;
+    padding: 5px 10px;
+    width: 160px;
+    }
+
+.dropdown a {
+    color: #333; /* Changed to visible text color */
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+.dropdown a:hover {
+    opacity: 0.7;
+}
+
+.navLeft li:hover > .dropdown {
+    display: block;
+}
+
+.dropdown ul {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 20;
+    width: 180px;
+}
+
+.dropdown li:hover > ul {
+    display: block;
+}
+
+.choose {
+    display: flex;
+    flex-direction: row;
+    color: rgb(25, 25, 94);
+    margin-left: 200px;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.choose a {
+    color: #11284c;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    padding-right: 2em;
+}
+
+.choose a:hover {
+    opacity: 0.5;
+}
+  
+.navRight ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .navBar {
+        flex-direction: column; /* Stack items vertically */
+        gap: 10px;
+    }
+
+    .navLeft, .navRight {
+        padding: 0; /* Remove padding for smaller screens */
+        margin: 0; /* Remove margin */
+        width: 100%; /* Full width */
+        text-align: center; /* Center align text */
+    }
+
+    .navLeft li, .navRight li {
+        display: block; /* Stack items vertically */
+        padding: 10px 0; /* Add vertical padding */
+    }
+
+    .choose {
+        margin-left: 0; /* Remove left margin */
+        justify-content: center; /* Center align */
+    }
+}
+
+@media (max-width: 480px) {
+    .navLeft li, .navRight li {
+        font-size: 16px; /* Adjust font size for mobile */
+    }
+
+    .searchIcon, .notiIcon {
+        width: 20px; /* Adjust icon size */
+        height: 20px;
+    }
+}
+
+
+/* CONTENT */
+.contents {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    z-index: -0;
+    color: white;
+    font-family: "League Gothic", sans-serif; 
+    overflow: hidden;
+    letter-spacing: 1px;
+}
+.contents img {
+    border-radius: 50px;
+}
+.contents h1 {
+    font-size: 90px;
+    font-weight: bold;
+}
+.contents p {
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+}
+.contents .button {
+    width: auto;
+    height: auto;
+    padding-top: 5px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.img-slideshow .intro {
+    padding-top: 20px;
+}
+.contents .button .watch-now {
+    width: 193px;
+    height: 56px;
+    border-radius: 41px;
+    background-color: rgb(236, 90, 148);
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    color: white;
+}
+.contents .button .watch-now:hover {
+    cursor: pointer;
+    width: 220px;
+    height: 80px;
+}
+  
+.contents .button .trailer {
+    width: 120px;
+    height: 48px;
+    border-radius: 41px;
+    background-color: rgb(0, 0, 0);
+    border-color: white;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+  
+.contents .button .trailer:hover {
+    cursor: pointer;
+    width: 150px;
+    height: 75px;
+}
+
+.contents .text-box {
+    width: 553px;
+}
+
+.contents .img-container  {
+    width: 788px;
+    height: 424px;
+    padding-left: 50px;
+}
+
+.contents .img-container img {
+    width: 90%;
+    height: 350px;
+}
+
+.contents .first-header {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 142px;
+    margin-left: 42px;   
+}
+
+.star {
+    color: gold;
+    font-size: 2rem;
+  }
+
+
+
+/* AWARD LIST */
+.award-listHeader {
+    color: white;
+    font-size: 90px;
+    font-weight: bold;
+    padding: 37px;
+    font-family: "League Gothic", sans-serif; 
+    margin-top: 100px;
+}
+
+.award-list {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    width: 1403px;
+    height: auto;
+    column-gap: 23px;
+    color: white;
+    gap: 25px;
+    margin-left: 37px;
+    padding-bottom: 50px;
+}
+
+.award-list .award-item {
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    gap: 27px;
+}
+
+.award-item .name {
+    width: 175px;
+}
+
+.award-item img {
+    width: 82px;
+    height: 117px;
+}
+
+.award-item p {
+    color: rgb(92, 89, 89);
+}
+
+.award-listHeader .winner-text {
+    color:rgb(92, 89, 89);    
+}
+
+
+/* Tablet Styles (768px to 1024px) */
+@media screen and (max-width: 1024px) {
+    /* Navigation adjustments */
+    .navBar {
+        padding: 20px 5px;
+    }
+
+    .navLeft, .navRight {
+        padding: 0 20px;
+    }
+
+    .navLeft li, .navRight li {
+        padding: 0 10px;
+    }
+
+    .logo {
+        margin-right: 50px;
+    }
+
+    /* Content grid adjustments */
+    .content-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        margin-left: 50px;
+        width: auto;
+    }
+
+    .content-container .card img {
+        width: 220px;
+        height: 365px;
+    }
+
+    /* Footer adjustments */
+    .footer {
+        gap: 50px;
+        flex-wrap: wrap;
+    }
+}
+
+/* Mobile Styles (up to 767px) */
+@media screen and (max-width: 767px) {
+    /* Navigation adjustments */
+    .navBar {
+        flex-direction: column;
+        padding: 15px 5px;
+    }
+
+    .logo {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .navLeft {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+    .navRight{
+        text-align: right;
+    }
+
+    .navLeft li, .navRight li {
+        padding: 5px 10px;
+    }
+
+    /* Dropdown adjustments */
+    .dropdown {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+
+    /* Pagination adjustments */
+    .pagination {
+        gap: 15px;
+        padding: 50px 0;
+    }
+
+    .page {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    /* Footer adjustments */
+    .footer {
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .left-row {
+        margin-left: 0;
+    }
+
+    .left-row h5,
+    .right-row h5 {
+        font-size: 24px;
+    }
+
+    .middle-row {
+        width: 100%;
+    }
+
+    .middle-row img {
+        width: 200px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .right-row .card {
+        justify-content: center;
+    }
+}
+
+/* Small Mobile Styles (up to 480px) */
+@media screen and (max-width: 480px) {
+
+    /* Navigation text size */
+    .navLeft li a,
+    .navRight li a {
+        font-size: 14px;
+    }
+}
+
+
+.video-background {
+    position: absolute; /* Scoped to the first-header section */
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure the video stays behind the content */
+    overflow: hidden;
+    margin-top: -20px;
+}
+
+.video-background iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the iframe covers the entire section */
+    pointer-events: none; /* Prevents interaction with the iframe */
+}
+
+.contents {
+    position: relative; /* Ensure it stacks above the video */
+    z-index: 1; /* Higher than the video-background */
+}
+
+.contents .first-header {
+    position: relative; /* Ensure it stacks above the video */
+    z-index: 2; /* Higher than the video-background */
+}
+
+.contents .text-box {
+    position: relative; /* Ensure it stacks above the video */
+    z-index: 3; /* Higher than the video-background */
+}
+
+.award-list {
+    position: relative; /* Ensure it stacks above the video */
+    z-index: 2; /* Higher than the video-background */
+}
+
+.search-results {
+    position: relative; /* Ensure it stacks above the video */
+    z-index: 2; /* Higher than the video-background */
+}
+.footer {
+    position: relative; /* Ensure it stacks above the video */
+    z-index: 2; /* Higher than the video-background */
+}
+.award-listHeader {
+    position: relative; /* Ensure it stacks above the video */
+    z-index: 2; /* Higher than the video-background */
+}
+
+
+
+
+
+
+
+.contents .first-header {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-left: 100px;   
+}
+
+.search-results {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.search-results h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #444;
+    text-align: center;
+}
+
+.search-results ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.search-results li {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.search-results li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.search-results img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.search-results h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #222;
+}
+
+.search-results video {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.search-results p {
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+

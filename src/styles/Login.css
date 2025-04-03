@@ -1,0 +1,137 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", sans-serif;
+    background-color: #121212; /* Dark background to match the theme */
+    color: white;
+}
+
+/* Login Container */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto; /* Adjust height to fit content */
+    padding: 30px; /* Add padding for spacing inside the box */
+    background: rgba(0, 0, 0, 0.6); /* Increased transparency for a faded effect */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Add shadow for a floating effect */
+    z-index: 2; /* Ensure it appears above the video */
+    position: relative; /* Ensure it respects stacking context */
+    max-width: 400px; /* Limit the width of the box */
+    color: white; /* Text color */
+    margin: auto;
+    margin-top: 200px;
+}
+
+/* Login Title */
+.login-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: "League Gothic", sans-serif; /* Matches your theme font */
+    text-transform: uppercase;
+    color: red; /* Accent color */
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Input Fields */
+form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #2a2a2a;
+    color: white;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus {
+    border-color: #f5ba13; /* Accent color on focus */
+}
+
+/* Submit Button */
+form button {
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: red; /* Accent color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: black; /* Darker shade on hover */
+}
+
+/* Error Message */
+form p {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 480px) {
+    .login-container h2 {
+        font-size: 2rem;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    form input,
+    form button {
+        font-size: 0.9rem;
+    }
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1; /* Ensure the video is behind the login container */
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire area */
+}
+
+/* Watch2Day Logo */
+.login-logo {
+    margin-top: 20px; /* Add spacing above the logo */
+    width: 150px; /* Set the width of the logo */
+    height: auto; /* Maintain aspect ratio */
+    align-self: center; /* Center the logo horizontally */
+    opacity: 0.8; /* Slight transparency for a subtle effect */
+    transition: opacity 0.3s ease;
+}
+
+.login-logo:hover {
+    opacity: 1; /* Fully visible on hover */
+}

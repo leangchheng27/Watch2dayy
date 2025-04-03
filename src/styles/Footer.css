@@ -1,0 +1,51 @@
+    /* Footer adjustments */
+    .footer {
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .left-row {
+        margin-left: 0;
+    }
+
+    .left-row h5,
+    .right-row h5 {
+        font-size: 24px;
+    }
+
+    .middle-row {
+        width: 100%;
+    }
+
+    .middle-row img {
+        width: 200px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .right-row .card {
+        justify-content: center;
+    }
+
+    .social-links {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+/* Small Mobile Styles (up to 480px) */
+@media screen and (max-width: 480px) {
+
+    /* Navigation text size */
+    .navLeft li a,
+    .navRight li a {
+        font-size: 14px;
+    }
+
+    /* Right row adjustments */
+    .right-row {
+        display: flex;
+        flex-direction: column;
+    }
+}

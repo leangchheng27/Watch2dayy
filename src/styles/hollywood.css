@@ -1,0 +1,29 @@
+.hollywood {
+    padding: 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.hollywood h1 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.card {
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #555;
+}
