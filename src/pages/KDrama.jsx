@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import '../styles/KDrama.css';
+import '../styles/kdrama.css';
 import { kDramas } from '../data/kDramas'; // Ensure kDramas is correctly exported
 
 const KDrama = () => {
