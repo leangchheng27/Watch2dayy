@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import '../styles/cDrama.css';
+import '../styles/cdrama.css';
 import { cDramas } from '../data/cDramas'; // Ensure cDramas is correctly exported
 
 const CDrama = () => {
